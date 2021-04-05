@@ -10,10 +10,74 @@
 /*
   Note: This body rule set is to get you started
 */
-body {
-  background-color: goldenrod;
-  font-family: "Helvetica", sans-serif;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
+body,
+html {
+	margin-left: auto;
+	margin-right: auto;
+	height: 100%;
+	width: 100%;
+	font-family: "Montserrat", sans-serif;
+	margin-top: 0px;
+}
+
+header {
+	background-image: url(./resource/background.jpg);
+	background-size: cover;
+	padding: 2em;
+	/* making bluring edge */
+	box-shadow: inset 0 -2em 1.5em -0.5em white;
+}
+
+header h1 {
+	color: white;
+}
+
+header p {
+	background-color: rgba(255, 255, 255, 0.486);
+	padding: 20px 10%;
+	font-size: 1.2em;
+	line-height: 2em;
+}
+
+.container {
+	/* very important, have to expand the container to justify/align items properly*/
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+h1.heroTitle {
+	margin-top: 0px;
+	text-align: left;
+	font-size: 3em;
+	font-weight: 700;
+}
+
+#name {
+	color: rgb(110, 201, 253);
+}
+
+.btn {
+	background-color: white;
+	/* font family do not inherit in Form elements */
+	font-family: inherit;
+	padding: 1.5em 3em;
+	color: rgb(110, 201, 253);
+	font-weight: 700;
+	border-radius: 10px;
+	text-transform: uppercase;
+	border: rgb(110, 201, 253) solid 4px;
+	/* remove black border when click */
+	outline: none;
+	/* do not put transition in :hover, if do will make the transition not apply to unhover */
+	transition: background-color 0.5s, color 0.5s;
+	transition-timing-function: ease-in-out;
+}
+
+.btn:hover {
+	background-color: rgb(110, 201, 253);
+	color: white;
 }
