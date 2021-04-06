@@ -25,7 +25,7 @@ header {
 	background-size: cover;
 	padding: 2em;
 	/* making bluring edge */
-	box-shadow: inset 0 -2em 1.5em -0.5em white;
+	box-shadow: inset 0 -2em 1em -0.5em white;
 }
 
 header h1 {
@@ -35,14 +35,14 @@ header h1 {
 
 header p {
   width: 70%;
-	background-color: rgba(247, 251, 255, 0.76);
+	background-color: rgba(255, 255, 255, 0.76);
 	padding: 20px;
 	font-size: 1.2rem;
 	line-height: 2rem;
   text-align: justify;
-  font-weight: 700;
-  color: #71a5c4;
-  border-radius: 30px;
+  font-weight: 500;
+  color: #3e85ad;
+  border-radius: 5px;
   box-shadow: 0 0 10px 10px rgba(247, 251, 255, 0.76)
 }
 
@@ -74,7 +74,7 @@ section {
   display: grid;
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(auto-fill, auto);
-  gap: 1rem 2rem;
+  gap: 1rem 3rem;
   padding: 1em;
   margin: 1em 5em;
 }
@@ -85,7 +85,7 @@ section {
   background: #8fd3fa;
   padding: 1em;
   color: white;
-  border-radius:20px;
+  border-radius:5px;
   font-weight: 700;
   transition: background 0.3s;
 }
