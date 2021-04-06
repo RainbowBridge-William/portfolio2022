@@ -35,23 +35,23 @@ header h1 {
 
 header p {
   width: 70%;
-	background-color: rgba(255, 255, 255, 0.76);
+	background-color: rgba(255, 255, 255, 0.6);
 	padding: 20px;
 	font-size: 1.2rem;
 	line-height: 2rem;
   text-align: justify;
-  font-weight: 500;
-  color: #3e85ad;
-  border-radius: 5px;
-  box-shadow: 0 0 10px 10px rgba(247, 251, 255, 0.76)
+  font-weight: 400;
+  color: #37779c;
+  border-radius: 1px;
+  box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.6)
 }
 
 h2 {
-  color:#6698b4;
+  color:#53a8da
 }
 
 strong {
-  color: #71a5c4;
+  color: #53a8da;
 }
 
 header > div {
@@ -120,9 +120,9 @@ img + p {
 }
 
 blockquote {
-  background-image: linear-gradient(to top left, #8fd3fa, white);
+  background-image: linear-gradient(to top left, #78f6ff, #54B0F8);
   padding: 0.2em 0px 1em 1em;
-  border-radius: 1em;
+  border-radius: 5px;
   font-size: 1.2em;
   font-weight: 500;
   box-shadow: 0px 0px 5px 4px white inset;
@@ -143,6 +143,7 @@ h1.heroTitle {
 	text-align: left;
 	font-size: 3em;
 	font-weight: 700;
+  text-align: center;
 }
 
 #name {
