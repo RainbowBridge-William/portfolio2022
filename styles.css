@@ -33,11 +33,73 @@ header h1 {
 }
 
 header p {
-	background-color: rgba(255, 255, 255, 0.486);
+	background-color: rgba(255, 255, 255, 0.4);
 	padding: 20px 10%;
-	font-size: 1.2em;
-	line-height: 2em;
+	font-size: 1.2rem;
+	line-height: 2rem;
+  text-align: justify;
+  font-weight: 500;
 }
+
+section {
+  margin-top: 1rem;
+}
+
+.panel {
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+#classTaken {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(auto-fill, auto);
+  gap: 1rem 2rem;
+  padding: 1em;
+  margin: 1em 5em;
+}
+
+#classTaken li {
+  text-align: center;
+  list-style-type: none;
+  background: #8fd3fa;
+  padding: 1em;
+  color: white;
+  border-radius: 15px;
+  font-weight: 700;
+  transition: background 0.3s;
+}
+
+#classTaken li:hover {
+  background: #7CB4D5;
+
+}
+
+#favorite {
+  list-style-type: upper-roman;
+  line-height: 2;
+}
+
+.imageContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.imageContainer img {
+  width: 20rem;
+  border-radius: 50px;
+}  
+
+img + p {
+  color: gray;
+  font-size: xx-small;
+}
+
 
 .container {
 	/* very important, have to expand the container to justify/align items properly*/
@@ -73,7 +135,7 @@ h1.heroTitle {
 	/* remove black border when click */
 	outline: none;
 	/* do not put transition in :hover, if do will make the transition not apply to unhover */
-	transition: background-color 0.5s, color 0.5s;
+	transition: background-color 0.3s, color 0.3s;
 	transition-timing-function: ease-in-out;
 }
 
