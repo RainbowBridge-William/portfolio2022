@@ -16,8 +16,8 @@
 
 * {
 	box-sizing: border-box;
-	margin: 0;
 	padding: 0;
+	margin: 0;
 }
 
 body,
@@ -300,7 +300,7 @@ html {
 	top: 40px;
 	width: 300px;
 	height: calc(100% - 80px);
-	background: rgb(50, 119, 160);
+	background: rgb(64, 153, 204);
 	z-index: 1;
 	box-shadow: 0 20px 25px rgba(0, 0, 0, 0.25);
 	color: white;
@@ -309,6 +309,7 @@ html {
 .contact-wrap .contactForm {
 	position: absolute;
 	padding: 70px 50px;
+	padding-left: 200px;
 	width: calc(100% - 150px);
 	height: 100%;
 	z-index: 0;
@@ -333,6 +334,7 @@ html {
 	margin-top: calc(100% - 50px);
 	display: flex;
 	justify-content: space-between;
+	
 }
 
 .contact-wrap .contactInfo .media li {
@@ -340,8 +342,99 @@ html {
 	transform: scale(2);
 }
 
+.contact-wrap .contactInfo .media li i {
+	transition: 0.4s;
+}
+
+.contact-wrap .contactInfo .media li i:hover {
+	opacity: 0.5;
+}
+
+
 .contact-wrap .contactInfo .media li a {
 	color: inherit;
+}
+
+
+.contact-wrap .contactForm h2 {
+	color: rgb(64, 153, 204);
+	font-size: 24px;
+	font-weight: 500;
+}
+
+.contact-wrap .contactForm .formBox {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding-top: 30px;
+}
+
+.contact-wrap .contactForm .formBox .inputBox {
+	margin-bottom: 35px;
+	position: relative;
+}
+
+.contact-wrap .contactForm .formBox .inputBox.w50 {
+	width: 47%;
+}
+
+.contact-wrap .contactForm .formBox .inputBox.w100 {
+	width: 100%;
+}
+
+.contact-wrap .contactForm .formBox .inputBox input, .contact-wrap .contactForm .formBox .inputBox textarea {
+	width: 100%;
+	padding: 5px 0;
+	font-size: 18px;
+	font-weight: 300;
+	border: none;
+	outline: none;
+	border-bottom: #37779c solid 2px;
+	font-family: inherit;
+}
+
+.contact-wrap .contactForm .formBox .inputBox textarea {
+	height: 90px;
+}
+
+.contact-wrap .contactForm .formBox .inputBox.w100.btn {
+	padding: 5px;
+	border-color: rgb(64, 153, 204);
+}
+
+.contact-wrap .contactForm .formBox .inputBox.w100.btn:hover {	
+	background: rgb(64, 153, 204);
+}
+
+.contact-wrap .contactForm .formBox .inputBox.w100.btn input {
+	background: none;
+	font-weight: 700;
+	border: none;
+	transition: 0.3s;
+	color: rgb(64, 153, 204);
+}
+
+.contact-wrap .contactForm .formBox .inputBox.w100.btn input:hover {
+	color: white;
+	cursor: pointer;
+}
+
+
+.contact-wrap .contactForm .formBox .inputBox span {
+	position: absolute;
+	left: 0;
+	padding: 5px 0;
+	pointer-events: none;
+	font-weight: 300;
+	transition: 0.3s;
+	font-size: 18px;
+}
+
+.contact-wrap .contactForm .formBox .inputBox input:focus + span, .contact-wrap .contactForm .formBox .inputBox textarea:focus + span,
+.contact-wrap .contactForm .formBox .inputBox input:valid + span, .contact-wrap .contactForm .formBox .inputBox textarea:valid + span {
+	transform: translate(0, -20px);
+	font-size: 12px;
 }
 
 .about {
@@ -359,6 +452,7 @@ html {
 .about h1 {
 	color: white;
 	margin-bottom: 10px;
+	font-size: 36px;
 }
 
 .about p {
@@ -376,6 +470,7 @@ html {
 
 section > h2 {
 	color: #53a8da;
+	margin: 10px;
 }
 
 .favorite > li > strong {
@@ -399,10 +494,12 @@ section > h2 {
 }
 
 #classTaken li {
+	max-width: 200px;
+	height: auto;
+	padding: 1rem;
 	text-align: center;
 	list-style-type: none;
 	background: #8fd3fa;
-	padding: 1em;
 	color: white;
 	border-radius: 5px;
 	font-weight: 700;
@@ -427,6 +524,7 @@ section > h2 {
 }
 
 .imageContainer img {
+	margin: 20px;
 	width: 20rem;
 	border-radius: 50px;
 	box-shadow: 0px 0px 5px 4px rgb(167, 167, 167);
@@ -438,10 +536,11 @@ img + p {
 }
 
 .quote blockquote {
+	padding: 10px;
 	background-image: linear-gradient(to top left, #78f6ff, #54b0f8);
 	padding: 0.2em 0px 1em 1em;
 	border-radius: 5px;
 	font-size: 1.2em;
-	font-weight: 500;
+	font-weight: 300;
 	box-shadow: 0px 0px 5px 4px white inset;
 }
