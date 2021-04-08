@@ -19,19 +19,76 @@
 		/>
 	</head>
 	<body>
-		<div class="container">
-			<h1 class="heroTitle">
-				Hi! my name is
-				<span id="name">William Wang</span>
-				<br />
-				I'm a freshman student
-				<br />
-				at University of Washington.
-			</h1>
-			<br />
-			<a href="./about.html">
-				<button class="btn btn:hover">Learn more</button>
-			</a>
+		<div class="menu-wrap">
+			<input type="checkbox" class="toggler" />
+			<div class="hamburger">
+				<div></div>
+			</div>
+			<div class="menu">
+				<div>
+					<div>
+						<ul>
+							<li><a href="./index.html">Home</a></li>
+							<li><a href="./about.html" blank>About</a></li>
+							<li><a href="#">Project</a></li>
+							<li>
+								<a
+									href="https://www.linkedin.com/in/william-wang-b973931b6/"
+									target="_blank"
+									>Contact</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</div>
+
+		<header>
+			<div class="container">
+				<h1>
+					Hi! my name is
+					<span>William Wang</span>
+					<br />
+					I'm a freshman student
+					<br />
+					at University of Washington.
+				</h1>
+				<br />
+				<a href="./about.html">
+					<button class="btn btn:hover">Learn more</button>
+				</a>
+			</div>
+		</header>
+
+		<section class="projects">
+			<h1>PROJECTS</h1>
+			<div class="projects-wrap">
+				<div class="projectText">
+					<h2>Snake</h2>
+					<p>
+						This project is an 8-bit Snake game using HTML, CSS, and
+						JS. It provides features of point counting and
+						self-collision lost alert.
+					</p>
+					<a
+						href="https://github.com/RainbowBridge-William/snake-game"
+						target="_blank"
+					>
+						<button class="btn btn:hover">Source Code</button>
+					</a>
+				</div>
+				<div class="projectPic">
+					<img
+						src="./resource/snake.png"
+						alt="snake game project picture"
+					/>
+				</div>
+			</div>
+		</section>
+
+		<section class="contact">
+			<h1>CONTACT</h1>
+		</section>
 	</body>
 </html>
