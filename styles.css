@@ -2,8 +2,8 @@
     Name: William Wang
     Date: April 5, 2021
     Section: CSE 154 AO
-    This is the styles.css page for my portfolio of web development work. 
-    It is used by all pages in my portfolio to give the site a consistent look and feel. 
+    This is the styles.css page for my portfolio of web development work.
+    It is used by all pages in my portfolio to give the site a consistent look and feel.
 */
 
 :root {
@@ -158,6 +158,7 @@ a {
 #menu-wrap #toggler {
   opacity: 0;
 }
+
 #menu-wrap #menu > div > div > ul {
   padding-left: 0;
 }

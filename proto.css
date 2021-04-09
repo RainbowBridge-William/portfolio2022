@@ -7,7 +7,6 @@
     a consistent look and feel.
 */
 
-
 #container,
 #projects-wrap,
 #project-pic,
@@ -28,6 +27,7 @@
 
 #container,
 #contact {
+  height: 100vh;
   flex-direction: column;
 }
 
@@ -49,10 +49,6 @@
 #contact-wrap #contact-form,
 #contact-wrap #contact-form #form-box .input-box span {
   position: absolute;
-}
-
-#container, #contact {
-  height: 100vh;
 }
 
 h1 {
@@ -84,7 +80,8 @@ li {
   margin: 15px 5vw;
 }
 
-#projects-wrap, #contact-wrap #contact-form #form-box {
+#projects-wrap,
+#contact-wrap #contact-form #form-box {
   flex-wrap: wrap;
 }
 
@@ -226,7 +223,8 @@ li {
   width: 47%;
 }
 
-input, textarea {
+input,
+textarea {
   border: none;
   border-bottom: #37779c solid 2px;
 }
