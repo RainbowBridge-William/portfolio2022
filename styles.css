@@ -81,11 +81,10 @@ a {
 
 #menu-wrap #toggler {
   z-index: 2;
-  margin: 1rem;
+  margin: 0.9rem;
   cursor: pointer;
-  width: 60px;
-  height: 60px;
-  opacity: 0;
+  width: 61px;
+  height: 61px;
 }
 
 #menu-wrap #hamburger {
@@ -152,10 +151,13 @@ a {
 #menu-wrap #menu > div > div {
   max-width: 90vw;
   max-height: 100vh;
-  opacity: 0;
   transition: opacity 0.5s ease;
 }
 
+#menu-wrap #menu > div > div,
+#menu-wrap #toggler {
+  opacity: 0;
+}
 #menu-wrap #menu > div > div > ul {
   padding-left: 0;
 }
@@ -198,20 +200,22 @@ a {
 }
 
 #about,
-#about-container {
+#about-container,
+.image-container {
   flex-direction: column;
 }
 
 #about,
 #menu-wrap #menu > div,
 #menu-wrap #menu,
-#menu-wrap #hamburger {
+#menu-wrap #hamburger,
+.image-container {
   justify-content: center;
   align-items: center;
 }
 
 #about {
-  background: var(--primary-color);
+  background: rgb(110, 202, 253);
   padding: 2em;
   margin-bottom: 20px;
 }
@@ -279,11 +283,6 @@ section > h2 {
   margin: 0 50px;
 }
 
-.image-container {
-  align-items: center;
-  flex-direction: column;
-}
-
 .image-container img {
   margin: 20px;
   width: 20rem;
@@ -298,7 +297,7 @@ section > h2 {
 
 #quote blockquote {
   background-image: linear-gradient(to top left, #78f6ff, #54b0f8);
-  padding: 1em;
+  padding: 1.1em;
   border-radius: 5px;
   font-size: 1.2em;
   font-weight: 300;
