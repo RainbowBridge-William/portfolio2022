@@ -19,7 +19,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.container {
+#container {
   height: 100vh;
   width: 100%;
   display: flex;
@@ -28,19 +28,19 @@ body {
   align-items: center;
 }
 
-.container h1 {
+#container h1 {
   margin-top: 0px;
   font-weight: 700;
   text-align: center;
   font-size: 3rem;
 }
 
-.container > h1 > span {
+#container > h1 > span {
   color: var(--primary-color);
 }
 
 @media only screen and (max-width: 1100px) {
-  .container h1 {
+  #container h1 {
     font-size: 2rem;
     line-height: 1.5;
   }
@@ -65,14 +65,18 @@ body {
   color: white;
 }
 
-.menu-wrap {
+a {
+  text-decoration: none;
+}
+
+#menu-wrap {
   z-index: 100;
   position: fixed;
   top: 0;
   left: 0;
 }
 
-.menu-wrap .toggler {
+#menu-wrap #toggler {
   position: absolute;
   z-index: 2;
   top: 0;
@@ -84,7 +88,7 @@ body {
   opacity: 0;
 }
 
-.menu-wrap .hamburger {
+#menu-wrap #hamburger {
   position: absolute;
   top: 0;
   left: 0;
@@ -100,7 +104,7 @@ body {
   border-radius: 50%;
 }
 
-.menu-wrap .hamburger > div {
+#menu-wrap #hamburger > div {
   position: relative;
   width: 60%;
   height: 5px;
@@ -108,8 +112,8 @@ body {
   transition: all 0.4s ease;
 }
 
-.menu-wrap .hamburger > div:before,
-.menu-wrap .hamburger > div:after {
+#menu-wrap #hamburger > div:before,
+#menu-wrap #hamburger > div:after {
   content: "";
   position: absolute;
   width: 100%;
@@ -118,25 +122,25 @@ body {
   background-color: inherit;
 }
 
-.menu-wrap .hamburger > div:after {
+#menu-wrap #hamburger > div:after {
   top: 10px;
 }
 
-.menu-wrap .toggler:checked + .hamburger > div {
+#menu-wrap #toggler:checked + #hamburger > div {
   transform: rotate(135deg);
 }
 
-.menu-wrap .toggler:checked + .hamburger > div:before,
-.menu-wrap .toggler:checked + .hamburger > div:after {
+#menu-wrap #toggler:checked + #hamburger > div:before,
+#menu-wrap #toggler:checked + #hamburger > div:after {
   top: 0;
   transform: rotate(90deg);
 }
 
-.menu-wrap .toggler:checked:hover + .hamburger > div {
+#menu-wrap #toggler:checked:hover + #hamburger > div {
   transform: rotate(225deg);
 }
 
-.menu-wrap .menu {
+#menu-wrap #menu {
   z-index: 0;
   position: fixed;
   top: 0;
@@ -150,7 +154,7 @@ body {
   justify-content: center;
 }
 
-.menu-wrap .menu > div {
+#menu-wrap #menu > div {
   z-index: 100;
   background: linear-gradient(to top left, #78f6ff, #54b0f8);
   border-radius: 50%;
@@ -164,7 +168,7 @@ body {
   transition: all 0.4s ease;
 }
 
-.menu-wrap .menu > div > div {
+#menu-wrap #menu > div > div {
   text-align: center;
   max-width: 90vw;
   max-height: 100vh;
@@ -172,37 +176,42 @@ body {
   transition: opacity 0.4s ease;
 }
 
-.menu-wrap .menu > div > div > ul > li {
+#menu-wrap #menu > div > div > ul {
+  padding: 0;
+}
+
+
+#menu-wrap #menu > div > div > ul > li {
   list-style: none;
   font-size: 2rem;
   padding: 1rem;
 }
 
-.menu-wrap .menu > div > div > ul > li > a {
+#menu-wrap #menu > div > div > ul > li > a {
   color: white;
   text-decoration: none;
   transition: opacity 0.4s ease;
 }
 
-.menu-wrap .menu > div > div > ul > li > a:hover {
+#menu-wrap #menu > div > div > ul > li > a:hover {
   opacity: 0.5;
 }
 
-.menu-wrap .toggler:checked ~ .menu {
+#menu-wrap #toggler:checked ~ #menu {
   visibility: visible;
 }
 
-.menu-wrap .toggler:checked ~ .menu > div {
+#menu-wrap #toggler:checked ~ #menu > div {
   transform: scale(1);
   transition-duration: 1.5s;
 }
 
-.menu-wrap .toggler:checked ~ .menu > div > div {
+#menu-wrap #toggler:checked ~ #menu > div > div {
   opacity: 1;
   transition: opacity 2s ease;
 }
 
-.projects-wrap {
+#projects-wrap {
   margin: 15px 5vw;
   display: flex;
   flex-wrap: wrap;
@@ -210,20 +219,20 @@ body {
   align-items: center;
 }
 
-.projects > h1,
-.contact > h1 {
+#projects > h1,
+#contact > h1 {
   text-align: center;
   font-size: 36px;
   font-weight: 700;
 }
 
-.projects-wrap button {
+#projects-wrap a {
   padding: 0.5rem 1rem;
   border: var(--primary-color) solid 3px;
   margin-top: 10px;
 }
 
-.project-text {
+#project-text {
   text-align: justify;
   height: 35rem;
   width: 23rem;
@@ -232,18 +241,18 @@ body {
 }
 
 @media only screen and (max-width: 1100px) {
-  .project-text {
+  #project-text {
     height: auto;
     width: 35em;
     margin-right: 0;
   }
 
-  .project-pic {
+  #project-pic {
     margin-top: 20px;
   }
 }
 
-.project-pic {
+#project-pic {
   width: 35em;
   height: 35em;
   display: flex;
@@ -252,22 +261,22 @@ body {
   flex-wrap: initial;
 }
 
-.picture {
+#picture {
   transition: all 0.4s ease-out;
 }
 
-.project-pic > img {
+#project-pic > img {
   width: 100%;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
 }
 
-.contact * {
+#contact * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-.contact {
+#contact {
   position: relative;
   z-index: 0;
   width: 100%;
@@ -280,14 +289,14 @@ body {
   margin-top: 100px;
 }
 
-.contact-wrap {
+#contact-wrap {
   position: relative;
   min-width: 1000px;
   min-height: 500px;
   display: flex;
 }
 
-.contact-wrap .contact-info {
+#contact-wrap #contact-info {
   position: absolute;
   padding: 50px 50px;
   top: 40px;
@@ -299,7 +308,7 @@ body {
   color: white;
 }
 
-.contact-wrap .contact-form {
+#contact-wrap #contact-form {
   position: absolute;
   padding: 70px 50px;
   padding-left: 200px;
@@ -311,52 +320,52 @@ body {
   box-shadow: 0 20px 25px rgba(0, 0, 0, 0.25);
 }
 
-.contact-wrap .contact-info .info li {
+#contact-wrap #contact-info #info li {
   list-style: none;
   position: relative;
   margin: 40px 0;
   align-items: flex-start;
 }
 
-.contact-wrap .contact-info .info img {
+#contact-wrap #contact-info #info img {
   width: 25px;
   margin-right: 20px;
 }
 
-.contact-wrap .contact-info .media img {
+#contact-wrap #contact-info #media img {
   width: 15px;
 }
 
-.contact-wrap .contact-info .media {
+#contact-wrap #contact-info #media {
   margin-top: calc(100% - 50px);
   display: flex;
   justify-content: space-between;
 }
 
-.contact-wrap .contact-info .media li {
+#contact-wrap #contact-info #media li {
   list-style: none;
   transform: scale(2);
 }
 
-.contact-wrap .contact-info .media li img {
+#contact-wrap #contact-info #media li img {
   transition: 0.4s;
 }
 
-.contact-wrap .contact-info .media li img:hover {
+#contact-wrap #contact-info #media li img:hover {
   opacity: 0.5;
 }
 
-.contact-wrap .contact-info .media li a {
+#contact-wrap #contact-info #media li a {
   color: inherit;
 }
 
-.contact-wrap .contact-form h2 {
+#contact-wrap #contact-form h2 {
   color: rgb(64, 153, 204);
   font-size: 24px;
   font-weight: 500;
 }
 
-.contact-wrap .contact-form .form-box {
+#contact-wrap #contact-form #form-box {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -364,21 +373,21 @@ body {
   padding-top: 30px;
 }
 
-.contact-wrap .contact-form .form-box .input-box {
+#contact-wrap #contact-form #form-box .input-box {
   margin-bottom: 35px;
   position: relative;
 }
 
-.contact-wrap .contact-form .form-box .input-box.w50 {
+#contact-wrap #contact-form #form-box .input-box.w50 {
   width: 47%;
 }
 
-.contact-wrap .contact-form .form-box .input-box.w100 {
+#contact-wrap #contact-form #form-box .input-box.w100 {
   width: 100%;
 }
 
-.contact-wrap .contact-form .form-box .input-box input,
-.contact-wrap .contact-form .form-box .input-box textarea {
+#contact-wrap #contact-form #form-box .input-box input,
+#contact-wrap #contact-form #form-box .input-box textarea {
   width: 100%;
   padding: 5px 0;
   font-size: 18px;
@@ -389,20 +398,20 @@ body {
   font-family: inherit;
 }
 
-.contact-wrap .contact-form .form-box .input-box textarea {
+#contact-wrap #contact-form #form-box .input-box textarea {
   height: 90px;
 }
 
-.contact-wrap .contact-form .form-box .input-box.w100.btn {
+#contact-wrap #contact-form #form-box .input-box.w100.btn {
   padding: 0px;
   border: rgb(64, 153, 204) 3px solid;
 }
 
-.contact-wrap .contact-form .form-box .input-box.w100.btn:hover {
+#contact-wrap #contact-form #form-box .input-box.w100.btn:hover {
   background: rgb(64, 153, 204);
 }
 
-.contact-wrap .contact-form .form-box .input-box.w100.btn input {
+#contact-wrap #contact-form #form-box .input-box.w100.btn input {
   background: none;
   font-weight: 700;
   border: none;
@@ -411,12 +420,12 @@ body {
   padding: 15px;
 }
 
-.contact-wrap .contact-form .form-box .input-box.w100.btn input:hover {
+#contact-wrap #contact-form #form-box .input-box.w100.btn input:hover {
   color: white;
   cursor: pointer;
 }
 
-.contact-wrap .contact-form .form-box .input-box span {
+#contact-wrap #contact-form #form-box .input-box span {
   position: absolute;
   left: 0;
   padding: 5px 0;
@@ -426,46 +435,42 @@ body {
   font-size: 18px;
 }
 
-.contact-wrap .contact-form .form-box .input-box input:focus + span,
-.contact-wrap .contact-form .form-box .input-box textarea:focus + span,
-.contact-wrap .contact-form .form-box .input-box input:valid + span,
-.contact-wrap .contact-form .form-box .input-box textarea:valid + span {
+#contact-wrap #contact-form #form-box .input-box input:focus + span,
+#contact-wrap #contact-form #form-box .input-box textarea:focus + span,
+#contact-wrap #contact-form #form-box .input-box input:valid + span,
+#contact-wrap #contact-form #form-box .input-box textarea:valid + span {
   transform: translate(0, -20px);
   font-size: 12px;
 }
 
-.about {
-  background: url(./resource/background.jpg);
-  background-size: cover;
+#about {
+  background: var(--primary-color);
   padding: 2em;
-  /* making bluring edge */
-  box-shadow: inset 0 -2em 1em -0.5em white;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 20px;
 }
 
-.about h1 {
+#about h1 {
   color: white;
   margin-bottom: 30px;
   font-size: 36px;
 }
 
-.about p {
+#about p {
   width: 70%;
-  background-color: rgba(255, 255, 255, 0.6);
   padding: 20px;
   font-size: 1.2rem;
-  line-height: 2rem;
+  line-height: 2.5rem;
   text-align: justify;
   font-weight: 400;
-  color: #37779c;
+  color: white;
   border-radius: 1px;
-  box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.6);
 }
 
-.about-container {
+#about-container {
   margin: 0 10%;
   display: flex;
   flex-direction: column;
@@ -476,7 +481,7 @@ section > h2 {
   margin: 10px;
 }
 
-.favorite > li > strong {
+#favorite > li > strong {
   color: #53a8da;
 }
 
@@ -506,7 +511,7 @@ section > h2 {
   background: #7cb4d5;
 }
 
-.favorite {
+#favorite {
   list-style-type: upper-roman;
   line-height: 2;
   margin: 0 50px;
@@ -532,12 +537,12 @@ section > h2 {
   font-size: xx-small;
 }
 
-.quote blockquote {
+#quote blockquote {
   padding: 10px;
   background-image: linear-gradient(to top left, #78f6ff, #54b0f8);
   padding: 0.2em 0px 1em 1em;
   border-radius: 5px;
-  font-size: 1.2em;
+  font-size: 1#2em;
   font-weight: 300;
   box-shadow: 0px 0px 5px 4px white inset;
 }
