@@ -23,7 +23,7 @@ body,
   width: 100%;
 }
 
-.btn {
+.main-btn {
   background-color: white;
   font-family: inherit;
   padding: 1.5em 3em;
@@ -37,11 +37,11 @@ body,
   transition-timing-function: ease-in-out;
 }
 
-.btn:hover {
+.main-btn:hover {
   background: var(--primary-color);
 }
 
-.btn:hover,
+.main-btn:hover,
 #menu-wrap #menu > div > div > ul > li > a,
 #about h1,
 #about p,
