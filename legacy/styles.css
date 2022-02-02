@@ -326,13 +326,9 @@ body {
 	align-items: flex-start;
 }
 
-.contact-wrap .contact-info .info img {
-	width: 25px;
+.contact-wrap .contact-info .info li i {
+	transform: scale(2);
 	margin-right: 20px;
-}
-
-.contact-wrap .contact-info .media img {
-	width: 15px;
 }
 
 .contact-wrap .contact-info .media {
@@ -346,11 +342,11 @@ body {
 	transform: scale(2);
 }
 
-.contact-wrap .contact-info .media li img {
+.contact-wrap .contact-info .media li i {
 	transition: 0.4s;
 }
 
-.contact-wrap .contact-info .media li img:hover {
+.contact-wrap .contact-info .media li i:hover {
 	opacity: 0.5;
 }
 

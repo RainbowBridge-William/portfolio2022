@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!--
+    Name: William Wang
+    Date: April 5, 2021
+    Section: CSE 154 AO
+    This is the index.html page for my portfolio of web development work. It includes my side projects and a contact form(though still not functional since no js added).
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/7a0431b0d6.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./animate.js"></script>
+  </head>
+  <body>
+    <div class="menu-wrap">
+      <input type="checkbox" class="toggler" />
+      <div class="hamburger">
+        <div></div>
+      </div>
+      <div class="menu">
+        <div>
+          <div>
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./about.html">About</a></li>
+              <li>
+                <a
+                  href="https://github.com/RainbowBridge-William"
+                  target="_blank"
+                  >Project</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/william-wang-b973931b6/"
+                  target="_blank"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header>
+      <div class="container">
+        <h1>
+          Hi! my name is
+          <span>William Wang</span>
+          <br />
+          I'm a freshman student
+          <br />
+          at University of Washington.
+        </h1>
+        <br />
+        <a href="./about.html" target="_blank">
+          <button class="btn btn:hover">Learn more</button>
+        </a>
+      </div>
+    </header>
+
+    <section class="projects">
+      <h1>PROJECTS</h1>
+      <div class="projects-wrap">
+        <div class="project-text">
+          <h2>Snake</h2>
+          <p>
+            This project is an 8-bit Snake game using HTML, CSS, and JS. It
+            provides features of point counting and self-collision lost alert.
+          </p>
+          <a
+            href="https://github.com/RainbowBridge-William/snake-game"
+            target="_blank"
+          >
+            <button class="btn btn:hover">Source Code</button>
+          </a>
+        </div>
+        <div class="project-pic">
+          <img
+            src="./resource/snake.png"
+            alt="snake game project picture"
+            class="picture"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="contact-wrap">
+        <div class="contact-info">
+          <h2>Contact Info</h2>
+          <ul class="info">
+            <li>
+              <i class="far fa-envelope"></i>
+              <span>swang45@uw.edu</span>
+            </li>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Seattle, WA</span>
+            </li>
+          </ul>
+          <ul class="media">
+            <li>
+              <a href="https://www.linkedin.com/in/william-wang-b973931b6/"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://github.com/RainbowBridge-William"
+                ><i class="fab fa-github"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/profile.php?id=100056648702687"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <div class="contact-form">
+          <h2>Send a Message</h2>
+          <div class="form-box">
+            <div class="input-box w50">
+              <input type="text" required />
+              <span>First Name</span>
+            </div>
+            <div class="input-box w50">
+              <input type="text" required />
+              <span>Last Name</span>
+            </div>
+            <div class="input-box w100">
+              <input type="email" required />
+              <span>Email Address</span>
+            </div>
+            <div class="input-box w100">
+              <textarea type="email" required></textarea>
+              <span>Write your message</span>
+            </div>
+            <div class="input-box w100 btn">
+              <input type="submit" value="Send" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
