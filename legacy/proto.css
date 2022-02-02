@@ -1,0 +1,285 @@
+/*
+    Name: William Wang
+    Date: April 5, 2021
+    Section: CSE 154 AO
+    This is the proto.css page for my portfolio of web development work.
+    It is used exclusively in index pages in my portfolio to give the site
+    a consistent look and feel.
+*/
+
+#container,
+#projects-wrap,
+#project-pic,
+#contact,
+#contact-wrap,
+#contact-wrap #contact-info #media,
+#contact-wrap #contact-form #form-box {
+  display: flex;
+}
+
+#container,
+#projects-wrap,
+#project-pic,
+#contact {
+  justify-content: center;
+  align-items: center;
+}
+
+#container,
+#contact {
+  height: 100vh;
+  flex-direction: column;
+}
+
+#project-pic > img,
+#contact-wrap #contact-form #form-box .input-box.w100,
+#contact-wrap #contact-form #form-box .input-box input,
+#contact-wrap #contact-form #form-box .input-box textarea {
+  width: 100%;
+}
+
+#contact-wrap,
+#contact-wrap #contact-info #info li,
+#contact-wrap #contact-form #form-box,
+#contact-wrap #contact-form #form-box .input-box {
+  position: relative;
+}
+
+#contact-wrap #contact-info,
+#contact-wrap #contact-form,
+#contact-wrap #contact-form #form-box .input-box span {
+  position: absolute;
+}
+
+h1 {
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+#container h1 {
+  margin-top: 0px;
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+#container > h1 > span {
+  color: var(--primary-color);
+}
+
+@media only screen and (max-width: 1100px) {
+  #container h1 {
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+}
+
+#projects-wrap {
+  margin: 15px 5vw;
+}
+
+#projects-wrap,
+#contact-wrap #contact-form #form-box {
+  flex-wrap: wrap;
+}
+
+#projects > h1,
+#contact > h1 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+#projects-wrap a {
+  padding: 0.5rem 1rem;
+  border: var(--primary-color) solid 3px;
+  margin-top: 10px;
+}
+
+#project-text {
+  text-align: justify;
+  height: 35rem;
+  width: 23rem;
+  line-height: 2rem;
+  margin-right: 50px;
+}
+
+@media only screen and (max-width: 1100px) {
+  #project-text {
+    height: auto;
+    width: 35em;
+    margin-right: 0;
+  }
+
+  #project-pic {
+    margin-top: 20px;
+  }
+}
+
+#project-pic {
+  width: 35em;
+  height: 35em;
+  flex-wrap: initial;
+}
+
+#picture {
+  transition: all 0.4s ease-out;
+}
+
+#project-pic > img {
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+#contact * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#contact {
+  z-index: 0;
+  background: linear-gradient(to top left, #78f6ff, #54b0f8);
+  margin-top: 100px;
+}
+
+#contact-wrap {
+  min-width: 1000px;
+  min-height: 500px;
+}
+
+#contact-wrap #contact-info {
+  padding: 50px 50px;
+  top: 40px;
+  width: 300px;
+  height: calc(100% - 80px);
+  background: rgb(64, 153, 205);
+  z-index: 1;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.25);
+  color: white;
+}
+
+#contact-wrap #contact-form {
+  padding: 70px 50px;
+  padding-left: 200px;
+  width: calc(100% - 150px);
+  height: 100%;
+  left: 150px;
+  background-color: white;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.25);
+}
+
+#contact-wrap #contact-info #info li {
+  margin: 40px 0;
+  align-items: flex-start;
+}
+
+#contact-wrap #contact-info #info img {
+  width: 25px;
+  margin-right: 20px;
+}
+
+#contact-wrap #contact-info #media img {
+  width: 15px;
+}
+
+#contact-wrap #contact-info #media {
+  margin-top: calc(100% - 50px);
+  justify-content: space-around;
+}
+
+#contact-wrap #contact-info #media li {
+  transform: scale(2);
+}
+
+#contact-wrap #contact-info #media li img {
+  transition: 0.4s;
+}
+
+#contact-wrap #contact-info #media li img:hover {
+  opacity: 0.5;
+}
+
+#contact-wrap #contact-info #media li a {
+  color: inherit;
+}
+
+#contact-wrap #contact-form h2 {
+  color: rgb(64, 153, 204);
+  font-size: 24px;
+  font-weight: 500;
+}
+
+#contact-wrap #contact-form #form-box {
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+#contact-wrap #contact-form #form-box .input-box {
+  margin-bottom: 35px;
+}
+
+#contact-wrap #contact-form #form-box .input-box.w50 {
+  width: 47%;
+}
+
+input,
+textarea {
+  border: none;
+  border-bottom: #37779c solid 2px;
+}
+
+#contact-wrap #contact-form #form-box .input-box input,
+#contact-wrap #contact-form #form-box .input-box textarea {
+  padding: 10px 0;
+  font-size: 20px;
+  font-weight: 400;
+  outline: none;
+  font-family: inherit;
+}
+
+.input-box.w100.main-btn input {
+  border-bottom: none;
+}
+
+#contact-wrap #contact-form #form-box .input-box textarea {
+  height: 90px;
+}
+
+#contact-wrap #contact-form #form-box .input-box.w100.main-btn {
+  border: rgb(64, 153, 204) 3px solid;
+}
+
+#contact-wrap #contact-form #form-box .input-box.w100.main-btn:hover {
+  background: rgb(64, 153, 204);
+}
+
+#contact-wrap #contact-form #form-box .input-box.w100.main-btn input {
+  background: none;
+  font-weight: 800;
+  transition: 0.3s;
+  color: rgb(54, 141, 190);
+  padding: 15px;
+}
+
+#contact-wrap #contact-form #form-box .input-box.w100.main-btn input:hover {
+  color: bisque;
+  cursor: pointer;
+}
+
+#contact-wrap #contact-form #form-box .input-box span {
+  left: 0;
+  padding: 5px 0;
+  pointer-events: none;
+  font-weight: 300;
+  transition: 0.5s;
+  font-size: 18px;
+}
+
+#contact-wrap #contact-form #form-box .input-box input:focus + span,
+#contact-wrap #contact-form #form-box .input-box textarea:focus + span,
+#contact-wrap #contact-form #form-box .input-box input:valid + span,
+#contact-wrap #contact-form #form-box .input-box textarea:valid + span {
+  transform: translate(0, -20px);
+  font-size: 12px;
+}
