@@ -1,329 +1,100 @@
-/* 
+/*
     Name: William Wang
     Date: April 5, 2021
     Section: CSE 154 AO
     This is the styles.css page for my portfolio of web development work.
-    It is used by all pages in my portfolio to give the site a consistent
-    look and feel. 
+    It is used by all pages in my portfolio to give the site a consistent look and feel.
 */
 
 :root {
-	--primary-color: rgb(110, 201, 253);
+  --primary-color: rgb(110, 201, 253);
 }
 
 body {
-	padding: 0;
-	margin: 0;
-	height: 100%;
-	width: 100%;
-	font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
-.container {
-	/* very important, have to expand the container to justify/align items properly*/
-	height: 100vh;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+body,
+#menu-wrap #hamburger > div:before,
+#menu-wrap #hamburger > div:after,
+#menu-wrap #menu {
+  width: 100%;
 }
 
-.container h1 {
-	margin-top: 0px;
-	font-weight: 700;
-	text-align: center;
-	font-size: 3rem;
+.main-btn {
+  background-color: white;
+  font-family: inherit;
+  padding: 1.5em 3em;
+  color: var(--primary-color);
+  font-weight: 700;
+  border-radius: 10px;
+  text-transform: uppercase;
+  border: var(--primary-color) solid 4px;
+  outline: none;
+  transition: background-color 0.3s, color 0.3s;
+  transition-timing-function: ease-in-out;
 }
 
-.container > h1 > span {
-	color: var(--primary-color);
+.main-btn:hover {
+  background: var(--primary-color);
 }
 
-@media only screen and (max-width: 1100px) {
-	.container h1 {
-		font-size: 2rem;
-		line-height: 1.5;
-	}
+.main-btn:hover,
+#menu-wrap #menu > div > div > ul > li > a,
+#about h1,
+#about p,
+#class-taken li {
+  color: white;
 }
 
-.btn {
-	background-color: white;
-	/* font family do not inherit in Form elements */
-	font-family: inherit;
-	padding: 1.5em 3em;
-	color: var(--primary-color);
-	font-weight: 700;
-	border-radius: 10px;
-	text-transform: uppercase;
-	border: var(--primary-color) solid 4px;
-	/* remove black border when click */
-	outline: none;
-	/* do not put transition in :hover, if do will make the transition not apply to unhover */
-	transition: background-color 0.3s, color 0.3s;
-	transition-timing-function: ease-in-out;
+a {
+  text-decoration: none;
 }
 
-.btn:hover {
-	background-color: var(--primary-color);
-	color: white;
+#menu-wrap,
+#menu-wrap #menu {
+  position: fixed;
 }
 
-.menu-wrap {
-	z-index: 100;
-	position: fixed;
-	top: 0;
-	left: 0;
+#menu-wrap,
+#menu-wrap #toggler,
+#menu-wrap #hamburger,
+#menu-wrap #toggler:checked + #hamburger > div:before,
+#menu-wrap #toggler:checked + #hamburger > div:after,
+#menu-wrap #menu {
+  top: 0;
+  left: 0;
 }
 
-.menu-wrap .toggler {
-	position: absolute;
-	z-index: 2;
-	top: 0;
-	left: 0;
-	margin: 1rem;
-	cursor: pointer;
-	width: 60px;
-	height: 60px;
-	opacity: 0;
+#menu-wrap #toggler,
+#menu-wrap #hamburger,
+#menu-wrap #hamburger > div:before,
+#menu-wrap #hamburger > div:after {
+  position: absolute;
 }
 
-/* Hamburger line */
-.menu-wrap .hamburger {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 60px;
-	height: 60px;
-	padding: 2px;
-	margin: 1rem;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	z-index: 1;
-	background: rgba(255, 255, 255, 0.7);
-	border-radius: 50%;
+#menu-wrap {
+  z-index: 100;
 }
 
-/* Hamburger middle line */
-.menu-wrap .hamburger > div {
-	position: relative;
-	width: 60%;
-	height: 5px;
-	background-color: var(--primary-color);
-	transition: all 0.4s ease;
+#menu-wrap #toggler {
+  z-index: 2;
+  margin: 0.9rem;
+  cursor: pointer;
+  width: 61px;
+  height: 61px;
 }
 
-/* Hamberger top and bottom line*/
-.menu-wrap .hamburger > div:before,
-.menu-wrap .hamburger > div:after {
-	content: "";
-	position: absolute;
-	width: 100%;
-	top: -10px;
-	height: 5px;
-	background-color: inherit;
-}
-
-.menu-wrap .hamburger > div:after {
-	top: 10px;
-}
-
-/* Toggler animate */
-.menu-wrap .toggler:checked + .hamburger > div {
-	transform: rotate(135deg);
-}
-
-.menu-wrap .toggler:checked + .hamburger > div:before,
-.menu-wrap .toggler:checked + .hamburger > div:after {
-	top: 0;
-	transform: rotate(90deg);
-}
-
-.menu-wrap .toggler:checked:hover + .hamburger > div {
-	transform: rotate(225deg);
-}
-
-.menu-wrap .menu {
-	z-index: 0;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	visibility: hidden;
-	overflow: hidden;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.menu-wrap .menu > div {
-	z-index: 100;
-	background: linear-gradient(to top left, #78f6ff, #54b0f8);
-	border-radius: 50%;
-	width: 200vw;
-	height: 200vw;
-	display: flex;
-	flex: none;
-	align-items: center;
-	justify-content: center;
-	transform: scale(0);
-	transition: all 0.4s ease;
-}
-
-.menu-wrap .menu > div > div {
-	text-align: center;
-	max-width: 90vw;
-	max-height: 100vh;
-	opacity: 0;
-	transition: opacity 0.4s ease;
-}
-
-.menu-wrap .menu > div > div > ul > li {
-	list-style: none;
-	font-size: 2rem;
-	padding: 1rem;
-}
-
-.menu-wrap .menu > div > div > ul > li > a {
-	color: white;
-	text-decoration: none;
-	transition: opacity 0.4s ease;
-}
-
-.menu-wrap .menu > div > div > ul > li > a:hover {
-	opacity: 0.5;
-}
-
-.menu-wrap .toggler:checked ~ .menu {
-	visibility: visible;
-}
-
-.menu-wrap .toggler:checked ~ .menu > div {
-	transform: scale(1);
-	transition-duration: 1.5s;
-}
-
-.menu-wrap .toggler:checked ~ .menu > div > div {
-	opacity: 1;
-	transition: opacity 2s ease;
-}
-
-.projects-wrap {
-	margin: 15px 5vw;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-}
-
-.projects > h1,
-.contact > h1 {
-	text-align: center;
-	font-size: 36px;
-	font-weight: 700;
-}
-
-.projects-wrap button {
-	padding: 0.5rem 1rem;
-	border: var(--primary-color) solid 3px;
-	margin-top: 10px;
-}
-
-.project-text {
-	text-align: justify;
-	height: 35rem;
-	width: 23rem;
-	line-height: 2rem;
-	margin-right: 50px;
-}
-
-@media only screen and (max-width: 1100px) {
-	.project-text {
-		height: auto;
-		width: 35em;
-		margin-right: 0;
-	}
-
-	.project-pic {
-		margin-top: 20px;
-	}
-}
-
-.project-pic {
-	width: 35em;
-	height: 35em;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: initial;
-}
-
-.picture {
-	transition: all 0.4s ease-out;
-}
-
-.project-pic > img {
-	width: 100%;
-	box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
-}
-
-.contact * {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
-}
-
-.contact {
-	position: relative;
-	z-index: 0;
-	width: 100%;
-	height: 100vh;
-	background: linear-gradient(to top left, #78f6ff, #54b0f8);
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	margin-top: 100px;
-}
-
-.contact-wrap {
-	position: relative;
-	min-width: 1000px;
-	min-height: 500px;
-	display: flex;
-}
-
-.contact-wrap .contact-info {
-	position: absolute;
-	padding: 50px 50px;
-	top: 40px;
-	width: 300px;
-	height: calc(100% - 80px);
-	background: rgb(64, 153, 204);
-	z-index: 1;
-	box-shadow: 0 20px 25px rgba(0, 0, 0, 0.25);
-	color: white;
-}
-
-.contact-wrap .contact-form {
-	position: absolute;
-	padding: 70px 50px;
-	padding-left: 200px;
-	width: calc(100% - 150px);
-	height: 100%;
-	z-index: 0;
-	left: 150px;
-	background-color: white;
-	box-shadow: 0 20px 25px rgba(0, 0, 0, 0.25);
-}
-
-.contact-wrap .contact-info .info li {
-	list-style: none;
-	position: relative;
-	margin: 40px 0;
-	align-items: flex-start;
+#menu-wrap #hamburger {
+  width: 60px;
+  height: 60px;
+  padding: 2px;
+  margin: 1rem;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
 }
 
 .contact-wrap .contact-info .info li i {
@@ -337,9 +108,8 @@ body {
 	justify-content: space-between;
 }
 
-.contact-wrap .contact-info .media li {
-	list-style: none;
-	transform: scale(2);
+#menu-wrap #toggler:checked + #hamburger > div {
+  transform: rotate(135deg);
 }
 
 .contact-wrap .contact-info .media li i {
@@ -350,198 +120,177 @@ body {
 	opacity: 0.5;
 }
 
-.contact-wrap .contact-info .media li a {
-	color: inherit;
+#menu-wrap #menu {
+  z-index: 0;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
 }
 
-.contact-wrap .contact-form h2 {
-	color: rgb(64, 153, 204);
-	font-size: 24px;
-	font-weight: 500;
+#menu-wrap #menu > div {
+  z-index: 99;
+  background: linear-gradient(to top left, #78f6ff, #54b0f8);
+  border-radius: 51%;
+  width: 200vw;
+  height: 200vw;
+  flex: none;
+  transform: scale(0);
+  transition: all 0.4s ease;
 }
 
-.contact-wrap .contact-form .form-box {
-	position: relative;
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	padding-top: 30px;
+#menu-wrap #menu > div > div {
+  max-width: 90vw;
+  max-height: 100vh;
+  transition: opacity 0.5s ease;
 }
 
-.contact-wrap .contact-form .form-box .input-box {
-	margin-bottom: 35px;
-	position: relative;
+#menu-wrap #menu > div > div,
+#menu-wrap #toggler {
+  opacity: 0;
 }
 
-.contact-wrap .contact-form .form-box .input-box.w50 {
-	width: 47%;
+#menu-wrap #menu > div > div > ul {
+  padding-left: 0;
 }
 
-.contact-wrap .contact-form .form-box .input-box.w100 {
-	width: 100%;
+#menu-wrap #menu > div > div > ul > li {
+  list-style: none;
+  font-size: 2rem;
+  padding: 1.1rem;
 }
 
-.contact-wrap .contact-form .form-box .input-box input,
-.contact-wrap .contact-form .form-box .input-box textarea {
-	width: 100%;
-	padding: 5px 0;
-	font-size: 18px;
-	font-weight: 300;
-	border: none;
-	outline: none;
-	border-bottom: #37779c solid 2px;
-	font-family: inherit;
+#menu-wrap #menu > div > div > ul > li > a {
+  transition: opacity 0.4s ease;
 }
 
-.contact-wrap .contact-form .form-box .input-box textarea {
-	height: 90px;
+#menu-wrap #menu > div > div > ul > li > a:hover {
+  opacity: 0.5;
 }
 
-.contact-wrap .contact-form .form-box .input-box.w100.btn {
-	padding: 0px;
-	border: rgb(64, 153, 204) 3px solid;
+#menu-wrap #toggler:checked ~ #menu {
+  visibility: visible;
 }
 
-.contact-wrap .contact-form .form-box .input-box.w100.btn:hover {
-	background: rgb(64, 153, 204);
+#menu-wrap #toggler:checked ~ #menu > div {
+  transform: scale(1);
+  transition-duration: 1.5s;
 }
 
-.contact-wrap .contact-form .form-box .input-box.w100.btn input {
-	background: none;
-	font-weight: 700;
-	border: none;
-	transition: 0.3s;
-	color: rgb(64, 153, 204);
-	padding: 15px;
+#menu-wrap #toggler:checked ~ #menu > div > div {
+  opacity: 1;
+  transition: opacity 2s ease;
 }
 
-.contact-wrap .contact-form .form-box .input-box.w100.btn input:hover {
-	color: white;
-	cursor: pointer;
+#menu-wrap #hamburger,
+#about-container,
+.image-container,
+#menu-wrap #menu,
+#menu-wrap #menu > div,
+#about {
+  display: flex;
 }
 
-.contact-wrap .contact-form .form-box .input-box span {
-	position: absolute;
-	left: 0;
-	padding: 5px 0;
-	pointer-events: none;
-	font-weight: 300;
-	transition: 0.3s;
-	font-size: 18px;
+#about,
+#about-container,
+.image-container {
+  flex-direction: column;
 }
 
-.contact-wrap .contact-form .form-box .input-box input:focus + span,
-.contact-wrap .contact-form .form-box .input-box textarea:focus + span,
-.contact-wrap .contact-form .form-box .input-box input:valid + span,
-.contact-wrap .contact-form .form-box .input-box textarea:valid + span {
-	transform: translate(0, -20px);
-	font-size: 12px;
+#about,
+#menu-wrap #menu > div,
+#menu-wrap #menu,
+#menu-wrap #hamburger,
+.image-container {
+  justify-content: center;
+  align-items: center;
 }
 
-.about {
-	background: url(./resource/background.jpg);
-	background-size: cover;
-	padding: 2em;
-	/* making bluring edge */
-	box-shadow: inset 0 -2em 1em -0.5em white;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+#about {
+  background: rgb(110, 202, 253);
+  padding: 2em;
+  margin-bottom: 20px;
 }
 
-.about h1 {
-	color: white;
-	margin-bottom: 30px;
-	font-size: 36px;
+#about h1 {
+  margin-bottom: 30px;
+  font-size: 36px;
 }
 
-.about p {
-	width: 70%;
-	background-color: rgba(255, 255, 255, 0.6);
-	padding: 20px;
-	font-size: 1.2rem;
-	line-height: 2rem;
-	text-align: justify;
-	font-weight: 400;
-	color: #37779c;
-	border-radius: 1px;
-	box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.6);
+#about p {
+  width: 70%;
+  padding: 20px;
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+  text-align: justify;
+  font-weight: 400;
+  border-radius: 1px;
 }
 
-.about-container {
-	margin: 0 10%;
-	display: flex;
-	flex-direction: column;
+#about-container {
+  margin: 0 10%;
 }
 
 section > h2 {
-	color: #53a8da;
-	margin: 10px;
+  color: #51a3d3;
+  margin: 10px;
 }
 
-.favorite > li > strong {
-	color: #53a8da;
+#favorite > li > strong {
+  color: #53a8da;
 }
 
 #class-taken {
-	display: grid;
-	grid-template-columns: repeat(3, auto);
-	grid-template-rows: repeat(auto-fill, auto);
-	gap: 1rem 3rem;
-	padding: 1em;
-	margin: 1em 5em;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(auto-fill, auto);
+  gap: 1rem 3rem;
+  padding: 1em;
+  margin: 1em 5em;
+}
+
+#class-taken li,
+#menu li {
+  text-align: center;
 }
 
 #class-taken li {
-	max-width: 200px;
-	height: auto;
-	padding: 1rem;
-	text-align: center;
-	list-style-type: none;
-	background: #8fd3fa;
-	color: white;
-	border-radius: 5px;
-	font-weight: 700;
-	transition: background 0.3s;
+  max-width: 200px;
+  height: auto;
+  padding: 1rem;
+  list-style-type: none;
+  background: #8fd3fa;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background 0.3s;
 }
 
 #class-taken li:hover {
-	background: #7cb4d5;
+  background: #7cb4d5;
 }
 
-.favorite {
-	list-style-type: upper-roman;
-	line-height: 2;
-	margin: 0 50px;
-}
-
-.image-container {
-	width: 100%;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	text-align: center;
+#favorite {
+  list-style-type: upper-roman;
+  line-height: 2;
+  margin: 0 50px;
 }
 
 .image-container img {
-	margin: 20px;
-	width: 20rem;
-	border-radius: 50px;
-	box-shadow: 0px 0px 5px 4px rgb(167, 167, 167);
+  margin: 20px;
+  width: 20rem;
+  border-radius: 50px;
+  box-shadow: 0px 0px 5px 4px rgb(167, 167, 167);
 }
 
 .image-container img + p {
-	color: gray;
-	font-size: xx-small;
+  color: gray;
+  font-size: x-small;
 }
 
-.quote blockquote {
-	padding: 10px;
-	background-image: linear-gradient(to top left, #78f6ff, #54b0f8);
-	padding: 0.2em 0px 1em 1em;
-	border-radius: 5px;
-	font-size: 1.2em;
-	font-weight: 300;
-	box-shadow: 0px 0px 5px 4px white inset;
+#quote blockquote {
+  background-image: linear-gradient(to top left, #78f6ff, #54b0f8);
+  padding: 1.1em;
+  border-radius: 5px;
+  font-size: 1.2em;
+  font-weight: 300;
+  box-shadow: 0px 0px 5px 4px white inset;
 }
